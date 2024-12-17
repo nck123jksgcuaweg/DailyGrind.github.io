@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Daily Grind Luxury Edition</title>
+   
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">Daily Grind</div>
+        <div class="nav-right">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search our premium menu...">
+                <button class="search-button" onclick="searchMenu()">Search</button>
+            </div>
+            <div class="order-tracking">
+                <input type="text" class="order-tracking-input" placeholder="Track your order" id="orderTrackingInput">
+                <button class="order-tracking-button" onclick="trackOrder()">Track</button>
+            </div>
+            <div class="cart-icon" onclick="toggleCart()">
+                🛒 <span class="cart-count">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Daily Grind</h1>
+            <p>"Elevate your daily brew, indulge in luxury."</p>
+        </div>
+    </section>
+
+    <section class="menu">
+        <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h2>Your Luxury Selection</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total">
+            <h3>Total: ₱<span id="cartTotal">0.00</span></h3>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+
+    <script src="script.js" async></script>
+</body>
+</html>
+
